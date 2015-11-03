@@ -155,6 +155,16 @@ namespace Vlc.DotNet.Forms
             }
         }
 
+        public void Play(string mrl, params string[] options)
+        {
+            //EndInit();
+            if (myVlcMediaPlayer != null)
+            {
+                myVlcMediaPlayer.SetMedia(mrl, options);
+                Play();
+            }
+        }
+
         public void Pause()
         {
             //EndInit();
@@ -375,6 +385,12 @@ namespace Vlc.DotNet.Forms
         {
             //EndInit();
             myVlcMediaPlayer.SetMedia(file, options);
+        }
+        
+        public void SetMedia(string mrl, params string[] options)
+        {
+            //EndInit();
+            myVlcMediaPlayer.SetMedia(mrl, options);
         }
         #endregion
     }
