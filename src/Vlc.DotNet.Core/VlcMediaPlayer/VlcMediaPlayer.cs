@@ -63,8 +63,8 @@ namespace Vlc.DotNet.Core
 
         public IntPtr VideoHostControlHandle
         {
-            get { return Manager.GetMediaPlayerVideoHostHandle(myMediaPlayerInstance); }
-            set { Manager.SetMediaPlayerVideoHostHandle(myMediaPlayerInstance, value); }
+            get { throw new InvalidOperationException("Window handle mechanism deactivated"); }
+            set { throw new InvalidOperationException("Window handle mechanism deactivated"); }
         }
 
         private void ResetFromMedia()

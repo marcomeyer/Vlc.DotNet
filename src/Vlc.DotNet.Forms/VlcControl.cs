@@ -72,7 +72,7 @@ namespace Vlc.DotNet.Forms
             {
                 myVlcMediaPlayer = new VlcMediaPlayer(VlcLibDirectory, VlcMediaplayerOptions);
             }
-            myVlcMediaPlayer.VideoHostControlHandle = Handle;
+            //myVlcMediaPlayer.VideoHostControlHandle = Handle;
             RegisterEvents();
         }
 
